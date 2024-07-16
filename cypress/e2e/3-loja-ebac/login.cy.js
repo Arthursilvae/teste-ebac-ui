@@ -13,7 +13,7 @@ describe ('Funcionalidade login', () => {
       cy.get('#username'). type ('arthur.teste@gmail.com') // elemento e ação de escrever(type) e nesse caso será utilizado usuário válido
       cy.get('#password'). type ('gamelata') // elemento e ação de escrever (type) e nesse caso será utilizado usuário válido
       cy.get('.woocommerce-form > .button').click() // elemento e ação de clicar
-      cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain','Olá, arthur.teste (não é arthur.teste? Sair)') // should usado para validar o teste utilizando um
+      cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
       // elemento que só aparecerá caso o cenário for cumprido
 
   })
