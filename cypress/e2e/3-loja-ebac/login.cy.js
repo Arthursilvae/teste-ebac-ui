@@ -1,7 +1,7 @@
 /// <reference types = "cypress"/> 
-    const perfil = require('../../fixtures/perfil.json') // o ..// serve para voltar uma pasta
 describe ('Funcionalidade login', () => {
-    beforeEach(() => { // comando para que essa ação seja repetida antes de cada teste
+   const perfil = require('../../fixtures/perfil.json')
+  beforeEach(() => { // comando para que essa ação seja repetida antes de cada teste
         cy.visit ('minha-conta') // comando cypress para visitar o site antes de cada teste
     });
     
@@ -32,19 +32,27 @@ describe ('Funcionalidade login', () => {
     cy.get('.woocommerce-error').should('exist') // validação de teste, verificar se o elemento existe
   });
 
-  it('Deve fazer login com sucesso - Usando massa de dados', () => {
-    cy.get('#username'). type (perfil.usuário)
+  it('Deve fazere login com sucesso- Usando massa de dados',() => {
+    cy.get('#username'). type (perfil.usuario)
     cy.get('#password'). type (perfil.senha)
-    cy.get('.woocommerce-form > .button').click()
+    cy.get('.woocommerce-form > .button').click() /
     cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
- });
+    
+  });
 
  it('Deve fazer login com sucesso - Usando Fixture', () => {
   cy.fixture("perfil").then (dados =>{
-    cy.get('#username'). type (dados.usuário, {log: false}) // log false usado para esconder os dados na hora de executar o cypress
+    cy.get('#username'). type (dados.usuario, {log: false}) // log false usado para esconder os dados na hora de executar o cypress
     cy.get('#password'). type (dados.senha, {log:false})
     cy.get('.woocommerce-form > .button').click()
     cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
   });
-  })
+ })
+it.only('Deve fazer Login com sucesso -Usando comandos customizados', () => {
+  cy.login('arthur.teste@gmail.com', 'gamelata')
+  cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
+
+  
+});
+
 })
