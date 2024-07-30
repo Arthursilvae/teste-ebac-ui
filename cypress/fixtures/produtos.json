@@ -1,0 +1,32 @@
+[
+    {
+        "nomeProduto": "Stellar Solar Jacket",
+        "tamanho": "S",
+        "cor": "Yellow",
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Ingrid Running Jacket",
+        "tamanho": "S",
+        "cor": "White",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto": "Ariel Roll Sleeve Sweatshirt",
+        "tamanho": "M",
+        "cor": "Red",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto": "Celeste Sports Bra",
+        "tamanho": "XS",
+        "cor": "Green",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto": "Electra Bra Top",
+        "tamanho": "XL",
+        "cor": "Gray",
+        "quantidade": 5
+    }
+]
