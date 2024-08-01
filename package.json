@@ -4,7 +4,10 @@
   "description": "teste automatizado e use interface utilizando o cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test" : "npx cypress run --browser chrome",
+    "cy:dash" : "npx cypress run --record --key 2dc7be7e-5fb9-450b-979f-809036746a3b"
+
+
   },
   "keywords": [],
   "author": "",
